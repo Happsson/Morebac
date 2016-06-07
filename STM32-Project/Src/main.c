@@ -21,7 +21,7 @@
 #define sensorVoltageSupplyPin 	GPIO_PIN_8
 #define HIGH										GPIO_PIN_SET
 #define LOW 										GPIO_PIN_RESET
-#define timeDelay								1000
+#define timeDelay								5000
 #define sensorDataPin						ADC_CHANNEL_4
 #define INVALID									0xFFFF
 
