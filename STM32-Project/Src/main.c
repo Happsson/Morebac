@@ -44,7 +44,7 @@
 #include <string.h>
 
 /* Defines -----------------------------------------------------------------*/
-#define ledPin 									GPIO_PIN_9
+#define ledPin 									GPIO_PIN_12
 #define sensorVoltageSupplyPin 	GPIO_PIN_8
 #define HIGH										GPIO_PIN_SET
 #define LOW 										GPIO_PIN_RESET
@@ -111,9 +111,9 @@ int main(void)
 /******Blink the LED 5 times to se that the program started*****/
 	for(int i = 0; i<5; i++){
 		digitalWrite(ledPin,HIGH);
-		delay(100);
+		delay(500);
 		digitalWrite(ledPin,LOW);
-		delay(100);		
+		delay(500);		
 	}
 	
 	//Serial_printString("hej");
@@ -208,7 +208,7 @@ high or low
 -----------------------------------------------------------*/
 void digitalWrite(uint16_t pinName, GPIO_PinState state ){
 
-	HAL_GPIO_WritePin(GPIOC, pinName, state);
+	HAL_GPIO_WritePin(GPIOB, pinName, state);
 
 }
 

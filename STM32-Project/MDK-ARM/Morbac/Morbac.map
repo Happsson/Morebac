@@ -955,9 +955,9 @@ Image Symbol Table
     i.digitalWrite                           0x08002234   Section        0  main.o(i.digitalWrite)
     i.main                                   0x08002248   Section        0  main.o(i.main)
     i.makeMeasurements                       0x080022bc   Section        0  main.o(i.makeMeasurements)
-    .constdata                               0x08002350   Section       16  stm32l0xx_hal_rcc.o(.constdata)
-    APBAHBPrescTable                         0x08002350   Data          16  stm32l0xx_hal_rcc.o(.constdata)
-    .constdata                               0x08002360   Section       25  system_stm32l0xx.o(.constdata)
+    .constdata                               0x08002354   Section       16  stm32l0xx_hal_rcc.o(.constdata)
+    APBAHBPrescTable                         0x08002354   Data          16  stm32l0xx_hal_rcc.o(.constdata)
+    .constdata                               0x08002364   Section       25  system_stm32l0xx.o(.constdata)
     .data                                    0x20000000   Section        4  stm32l0xx_hal.o(.data)
     uwTick                                   0x20000000   Data           4  stm32l0xx_hal.o(.data)
     .data                                    0x20000004   Section        8  main.o(.data)
@@ -1105,12 +1105,12 @@ Image Symbol Table
     __scatterload_zeroinit                   0x080021e5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     analogRead                               0x080021f5   Thumb Code    54  main.o(i.analogRead)
     digitalWrite                             0x08002235   Thumb Code    14  main.o(i.digitalWrite)
-    main                                     0x08002249   Thumb Code   110  main.o(i.main)
+    main                                     0x08002249   Thumb Code   112  main.o(i.main)
     makeMeasurements                         0x080022bd   Thumb Code   126  main.o(i.makeMeasurements)
-    AHBPrescTable                            0x08002360   Data          16  system_stm32l0xx.o(.constdata)
-    PLLMulTable                              0x08002370   Data           9  system_stm32l0xx.o(.constdata)
-    Region$$Table$$Base                      0x0800237c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800239c   Number         0  anon$$obj.o(Region$$Table)
+    AHBPrescTable                            0x08002364   Data          16  system_stm32l0xx.o(.constdata)
+    PLLMulTable                              0x08002374   Data           9  system_stm32l0xx.o(.constdata)
+    Region$$Table$$Base                      0x08002380   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080023a0   Number         0  anon$$obj.o(Region$$Table)
     serial_input                             0x20000004   Data           1  main.o(.data)
     strLength                                0x20000005   Data           1  main.o(.data)
     sensorValue                              0x20000006   Data           2  main.o(.data)
@@ -1131,9 +1131,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000c1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000023b4, Max: 0x00008000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000023b8, Max: 0x00008000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000239c, Max: 0x00008000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000023a0, Max: 0x00008000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1240,11 +1240,11 @@ Memory Map of the image
     0x080021f4   0x00000040   Code   RO         2139    i.analogRead        main.o
     0x08002234   0x00000014   Code   RO         2141    i.digitalWrite      main.o
     0x08002248   0x00000074   Code   RO         2142    i.main              main.o
-    0x080022bc   0x00000094   Code   RO         2143    i.makeMeasurements  main.o
-    0x08002350   0x00000010   Data   RO          396    .constdata          stm32l0xx_hal_rcc.o
-    0x08002360   0x00000019   Data   RO         2455    .constdata          system_stm32l0xx.o
-    0x08002379   0x00000003   PAD
-    0x0800237c   0x00000020   Data   RO         2532    Region$$Table       anon$$obj.o
+    0x080022bc   0x00000098   Code   RO         2143    i.makeMeasurements  main.o
+    0x08002354   0x00000010   Data   RO          396    .constdata          stm32l0xx_hal_rcc.o
+    0x08002364   0x00000019   Data   RO         2455    .constdata          system_stm32l0xx.o
+    0x0800237d   0x00000003   PAD
+    0x08002380   0x00000020   Data   RO         2532    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000538, Max: 0x00002000, ABSOLUTE)
@@ -1269,31 +1269,31 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       156         28          0          8         96       1499   adc.o
-       268         26          0          0          0        991   gpio.o
-       124         26          0          0         60       1433   i2c.o
-        36         12          0          0         20        627   iwdg.o
-       568         70          0          8          0       5051   main.o
-        28          8        192          0       1024        588   startup_stm32l053xx.o
-       116         18          0          4          0     236098   stm32l0xx_hal.o
-       864         40          0          0          0       4355   stm32l0xx_hal_adc.o
-       142          0          0          0          0       1362   stm32l0xx_hal_adc_ex.o
-       178         28          0          0          0      12191   stm32l0xx_hal_cortex.o
-       388         30          0          0          0       2328   stm32l0xx_hal_gpio.o
-       164          6          0          0          0       1631   stm32l0xx_hal_i2c.o
-        96          0          0          0          0       1131   stm32l0xx_hal_i2c_ex.o
-       154          8          0          0          0       1755   stm32l0xx_hal_iwdg.o
-        28          4          0          0          0        438   stm32l0xx_hal_msp.o
-      1632        100         16          0          0       6372   stm32l0xx_hal_rcc.o
-       384         14          0          0          0       1480   stm32l0xx_hal_rcc_ex.o
-      2056         82          0          0          0      11019   stm32l0xx_hal_uart.o
-         2          0          0          0          0        996   stm32l0xx_hal_uart_ex.o
-        32          6          0          0          0       1676   stm32l0xx_it.o
-        84         18         25          4          0       1357   system_stm32l0xx.o
-       132         16          0          0        112       1490   usart.o
+       156         28          0          8         96       1531   adc.o
+       268         26          0          0          0       1007   gpio.o
+       124         26          0          0         60       1465   i2c.o
+        36         12          0          0         20        643   iwdg.o
+       572         72          0          8          0       5119   main.o
+        28          8        192          0       1024        596   startup_stm32l053xx.o
+       116         18          0          4          0     236250   stm32l0xx_hal.o
+       864         40          0          0          0       4403   stm32l0xx_hal_adc.o
+       142          0          0          0          0       1378   stm32l0xx_hal_adc_ex.o
+       178         28          0          0          0      12255   stm32l0xx_hal_cortex.o
+       388         30          0          0          0       2352   stm32l0xx_hal_gpio.o
+       164          6          0          0          0       1647   stm32l0xx_hal_i2c.o
+        96          0          0          0          0       1147   stm32l0xx_hal_i2c_ex.o
+       154          8          0          0          0       1779   stm32l0xx_hal_iwdg.o
+        28          4          0          0          0        446   stm32l0xx_hal_msp.o
+      1632        100         16          0          0       6436   stm32l0xx_hal_rcc.o
+       384         14          0          0          0       1496   stm32l0xx_hal_rcc_ex.o
+      2056         82          0          0          0      11131   stm32l0xx_hal_uart.o
+         2          0          0          0          0       1012   stm32l0xx_hal_uart_ex.o
+        32          6          0          0          0       1708   stm32l0xx_it.o
+        84         18         25          4          0       1381   system_stm32l0xx.o
+       132         16          0          0        112       1522   usart.o
 
     ----------------------------------------------------------------------
-      7646        540        268         24       1312     295868   Object Totals
+      7650        542        268         24       1312     296704   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         14          0          3          0          0          0   (incl. Padding)
 
@@ -1345,15 +1345,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8848        582        268         24       1312     293760   Grand Totals
-      8848        582        268         24       1312     293760   ELF Image Totals
-      8848        582        268         24          0          0   ROM Totals
+      8852        584        268         24       1312     294596   Grand Totals
+      8852        584        268         24       1312     294596   ELF Image Totals
+      8852        584        268         24          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 9116 (   8.90kB)
+    Total RO  Size (Code + RO Data)                 9120 (   8.91kB)
     Total RW  Size (RW Data + ZI Data)              1336 (   1.30kB)
-    Total ROM Size (Code + RO Data + RW Data)       9140 (   8.93kB)
+    Total ROM Size (Code + RO Data + RW Data)       9144 (   8.93kB)
 
 ==============================================================================
 
